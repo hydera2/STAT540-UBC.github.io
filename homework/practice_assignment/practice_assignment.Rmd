@@ -63,7 +63,10 @@ Answer the following questions by subseting, printing out the result or by graph
 ### 2.1 Passenger breakdown 
 
 Convert the array into a data frame by using `data.frame()` function. 
-
+```{r, eval=TRUE, echo=TRUE}
+t <- data.frame(Titanic)
+str(t)
+```
 - How many children and adults were on Titanic? 
 - Were there more female adult or male adult passengers? 
 
@@ -80,6 +83,9 @@ Here you'll practice reading data from a text file and do some graphing. The fil
 
 - Create a figure for this dataset (choose whatever graph you'd like!)
 - Explain how your graph is informative: what does it tell you about the result of the experiment? Also explain why you choose to present the data in this way. 
+ggplot(data = tg) + 
++      geom_point(mapping = aes(x = dose, y = len, colour = supp))
+> View(LiveFemales)
 
 ## 4. Mechanics (0.5pt)
 
@@ -88,7 +94,6 @@ This point is for the "quality" of this assignment.  Check out [assignment tips]
 - Properly labeled graphs
 - Well-formatted markdown (use of headings, subheadings, and numbering that makes sense)
 - No inexplicable R outputs (example: printing out an entire dataframe unnecessarily when one can simply use `str()`) 
-- Codes are commented when needed
 - No broken code. 
 
 We will also evaluate this part by looking at :
@@ -97,4 +102,8 @@ We will also evaluate this part by looking at :
 - all the files associated with this assignment is put inside a named folder. 
 
 Submit your assignment by opening an issue in your individual repo, tag the TAs and pasted the link to your latest commit.
+
+`` 
+data.frame(Titanic)
+``
 
